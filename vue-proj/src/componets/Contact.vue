@@ -6,12 +6,13 @@
                 <h3> Name : {{ name }}:</h3>
                 <p> Email : {{ email }}</p>
                 <p> phone : {{ phone }}</p>
+                <p>isFavourite:{{ isFavourite }}</p>
             </div>
         </div>
     </div>
 
     <div class=" col-3">
-        <button @click="emit('update-favorite', { isFavourite: props.isFavourite, name: props.name })"
+        <button @click="$emit('update-favorite', { isFavourite: props.isFavourite, name: props.name })"
             :class="[isFavourite ? ' btn btn-warning' : 'btn btn-success']">
 
 
