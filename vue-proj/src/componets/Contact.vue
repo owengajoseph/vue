@@ -6,22 +6,21 @@
                 <h3> Name : {{ name }}:</h3>
                 <p> Email : {{ email }}</p>
                 <p> phone : {{ phone }}</p>
-
-            </div>
-
-            <div class="col-3">
-
-                <button :class="[isFavourite ? 'btn btn warning' : 'btn btn-success']">
-
-                    {{ isFavourite ? "remove from " : "Add to" }} favourite
-
-                </button>
             </div>
         </div>
-        <span>
-            <p class="float-end small" v-if="ownerName != ''"> *this contact info belongs to {{ ownerName }}</p>
-        </span>
     </div>
+
+    <div class=" col-3">
+        <button @click="emit('update-favorite', { isFavourite: props.isFavourite, name: props.name })"
+            :class="[isFavourite ? ' btn btn-warning' : 'btn btn-success']">
+
+
+            {{ isFavourite ? "remove from" : "add to" }} Favorite
+
+        </button>
+    </div>
+
+
     <p>please send an email to hello@dotnetmastery.com</p>
 </template>
 
@@ -45,6 +44,6 @@ const props = defineProps(
 
     }
 
-
 );
+const emit = defineEmits(["update-favourite"]);
 </script>
