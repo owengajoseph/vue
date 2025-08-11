@@ -10,8 +10,8 @@
 
             <div class="row">
                 <div class="col-12" v-for="contact in contacts" :key="contact.name">
-                    <Contact :name="contact.name" :phone="contact.phone" :email="contact.email"
-                        :ownerName="contact.ownerName" :isFavourite="contact.isFavourite" />
+                    <Contact :name="contact.name" :phone="contact.phone" :email="contact.email" :ownerName="ownerName"
+                        :isFavourite="contact.isFavourite" />
                 </div>
             </div>
         </div>

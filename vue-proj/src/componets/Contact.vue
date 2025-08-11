@@ -7,6 +7,7 @@
                 <p> Email : {{ email }}</p>
                 <p> phone : {{ phone }}</p>
                 <p>isFavourite:{{ isFavourite }}</p>
+                <p>ownerName:{{ ownerName }}</p>
             </div>
         </div>
     </div>
