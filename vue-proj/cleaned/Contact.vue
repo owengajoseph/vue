@@ -6,28 +6,32 @@
                 <h3> Name : {{ name }}:</h3>
                 <p> Email : {{ email }}</p>
                 <p> phone : {{ phone }}</p>
-                <p>isFavourite:{{ isFavourite }}</p>
-                <p>ownerName:{{ ownerName }}</p>
+            </div>
+
+            <div class=" col-3">
+                <button @click="emit('update-favorite', { isFavourite: props.isFavourite, name: props.name })"
+                    :class="[isFavourite ? ' btn btn-warning form-control' : 'btn btn-success form-control']">
+
+
+                    {{ isFavourite ? "remove from" : "add to" }} Favorite
+
+                </button>
+            </div>
+            <div class="col-3">
+                <LuckyNumber></LuckyNumber>
             </div>
         </div>
-    </div>
-
-    <div class=" col-3">
-        <button @click="$emit('update-favorite', { isFavourite: props.isFavourite, name: props.name })"
-            :class="[isFavourite ? ' btn btn-warning' : 'btn btn-success']">
-
-
-            {{ isFavourite ? "remove from" : "add to" }} Favorite
-
-        </button>
+        <span class="float-end small" v-if="ownerName != ''">
+            *this contact info belongs to {{ ownerName }}
+        </span>
     </div>
 
 
-    <p>please send an email to hello@dotnetmastery.com</p>
 </template>
 
 
 <script setup>
+import LuckyNumber from "./LuckyNumber.vue";
 import { ref, defineProps } from "vue";
 const email = ref("hellovue.com");
 //how does this prop gets its values
@@ -41,7 +45,8 @@ const props = defineProps(
 
         },
         ownerName: String,
-        isFavourite: Boolean
+        isFavourite: Boolean,
+
 
 
     }

@@ -23,23 +23,26 @@
 </template>
 
 <script setup>
-import { reactive, defineEmits } from "vue";
+import { reactive, defineProps } from "vue";
 
 const emit = defineEmits(['add-contact']);
 
+const props = defineProps({
+    onAddcontact: Function,
+}
+)
+function addContact() {
+    props.onAddcontact({
+        name: contact.name,
+        phone: contact.phone,
+        email: contact.email
+    })
+}
 const contact = reactive({
     name: "",
     phone: "",
     email: ""
 });
 
-function addContact() {
-    // Emit the new contact to parent
-    emit('add-contact', { name:contact.name, email:contact.email, phone:contact.phone });
 
-    // Reset the fields
-    contact.name = "";
-    contact.phone = "";
-    contact.email = "";
-}
 </script>
