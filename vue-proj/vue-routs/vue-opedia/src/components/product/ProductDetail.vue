@@ -1,7 +1,11 @@
 <template>
     <P> product detail</P>
-
-    <p>product ID :{{ route.params.productId }}</p>
+    <div v-if="route.params.productId != null">
+        <p>product ID :{{ route.params.productId }}</p>
+    </div>
+    <div v-else>
+        <p>No product found</p>
+    </div>
 </template>
 
 
@@ -9,6 +13,6 @@
 import { useRoute } from 'vue-router';
 const route = useRoute();
 
-console.log(route.params);
+console.log(route.param);
 
 </script>

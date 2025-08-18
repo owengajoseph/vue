@@ -15,7 +15,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/contact">Contact Us</router-link>
+                        <router-link class="nav-link" :to="{ name: 'contact' }">Contact Us</router-link>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -28,10 +28,9 @@
                                 <router-link class="dropdown-item" to="/productlist">Product List</router-link>
                             </li>
                             <li>
-                                <!-- Example: Navigate to product with ID 1 -->
-                                <!-- <router-link class="dropdown-item" :to="{ path: '/product/1' }">
-                                    Product Detail (ID: 1)
-                                </router-link> -->
+                                <router-link class="dropdown-item" to="/product">
+                                    Product Detail
+                                </router-link>
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
