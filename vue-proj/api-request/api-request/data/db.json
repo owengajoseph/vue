@@ -1,0 +1,74 @@
+{
+    "destination": [
+        {
+            "id": 1,
+            "name": "Bangkok",
+            "days": 7,
+            "funFact": "Bangkok is the capital and most populous city of Thailand.",
+            "price": 1000
+        },
+        {
+            "id": 2,
+            "name": "Paris",
+            "days": 5,
+            "funFact": "Paris is known as the 'City of Light' and home to the Eiffel Tower.",
+            "price": 1500
+        },
+        {
+            "id": 3,
+            "name": "Tokyo",
+            "days": 10,
+            "funFact": "Tokyo is the largest metropolitan area in the world.",
+            "price": 2000
+        },
+        {
+            "id": 4,
+            "name": "New York",
+            "days": 6,
+            "funFact": "New York is nicknamed 'The Big Apple'.",
+            "price": 1800
+        },
+        {
+            "id": 5,
+            "name": "Cairo",
+            "days": 8,
+            "funFact": "Cairo is near the Great Pyramids of Giza.",
+            "price": 1200
+        },
+        {
+            "id": 6,
+            "name": "Sydney",
+            "days": 9,
+            "funFact": "Sydney is famous for its Opera House and Harbour Bridge.",
+            "price": 2200
+        },
+        {
+            "id": 7,
+            "name": "Rome",
+            "days": 7,
+            "funFact": "Rome is home to the Colosseum and the Vatican City.",
+            "price": 1600
+        },
+        {
+            "id": 8,
+            "name": "Dubai",
+            "days": 5,
+            "funFact": "Dubai is home to the tallest building in the world, Burj Khalifa.",
+            "price": 1400
+        },
+        {
+            "id": 9,
+            "name": "Rio de Janeiro",
+            "days": 10,
+            "funFact": "Rio is famous for its Carnival festival and Christ the Redeemer statue.",
+            "price": 1700
+        },
+        {
+            "id": 10,
+            "name": "London",
+            "days": 6,
+            "funFact": "London is home to the Big Ben and Buckingham Palace.",
+            "price": 1900
+        }
+    ]
+}
